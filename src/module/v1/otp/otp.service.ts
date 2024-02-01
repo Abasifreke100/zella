@@ -3,13 +3,11 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
 import { environment } from 'src/common/config/environment';
 import { OtpEnum } from 'src/common/constants/otp.enum';
 import { generateOTP } from 'src/common/utils/uniqueId';
 import { MailService } from '../mail/mail.service';
-import { jobTemplate, otpTemplate } from '../mail/template/otp';
+import { otpTemplate } from '../mail/template/otp';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from '../user/entity/user.entity';
